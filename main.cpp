@@ -6,7 +6,7 @@
 using namespace std;
 
 //variables related with area size of 3d function------------------
-short int solAreaMinX, solAreaMaxX, solAreaMinY, solAreaMaxY;//decided to not implement float here
+short int solAreaMinX, solAreaMaxX, solAreaMinY, solAreaMaxY;//decided to not implement double here
 float solAreaX, solAreaY;
 float minFSolArea, maxFSolArea;//for getting min and max values
 float minXYSolArea[2], maxXYSolArea[2];//for getting arg of min and max values
@@ -26,7 +26,7 @@ float bestResultsData[4]; //array to store overallBestPosition and overallBestEr
 short int genNum(short int min, short int max){
 	return rand() % (max - min -1) + min;
 }
-void particlesInitialization(float *solArea, float *particleData, short int sizeOfParticleData, short int solAreaMinX, short int solAreaMaxX, short int solAreaMinY, short int solAreaMaxY){
+void particlesInitialization(float solArea[], float particleData[], short int sizeOfParticleData, short int solAreaMinX, short int solAreaMaxX, short int solAreaMinY, short int solAreaMaxY){
 	srand( time( NULL ) );
 	for(short int x=0; x<sizeOfParticleData;){
 		//generating starting positions
